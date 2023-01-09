@@ -1,0 +1,206 @@
+/*------ custom font ------*/
+@font-face {
+  font-family: "videotype";
+  src: url("../fonts/videotype.ttf");
+}
+
+/*^^^^^^^^^^^^^^^^^^^^^^^^^*/
+h1,
+h2,
+p {
+  font-family: videotype;
+  color: white;
+}
+
+p {
+  font-size: 1.6em;
+  text-align: left;
+}
+
+body {
+  background-color: #161616;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  justify-content: space-around;
+  margin: 0;
+  padding-top: 2em;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+#scrollPath {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.01);
+}
+
+#progressbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 10px;
+  background: white;
+}
+
+#progressbar:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  filter: blur(10px);
+}
+
+#progressbar:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  filter: blur(30px);
+}
+
+/*------------- FORSIDE -------------*/
+
+h1 {
+  display: flex;
+  margin: auto;
+  font-size: 7vw;
+  justify-content: center;
+  text-shadow: 0 0 8px white;
+}
+
+.col_h2 h2 {
+  margin-top: 0;
+  display: flex;
+  font-size: 3vw;
+  justify-content: center;
+}
+
+.blink {
+  animation-name: blink;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  text-shadow: 0 0 6px white;
+}
+
+@keyframes blink {
+  100%,
+  60%,
+  70%,
+  79% {
+    opacity: 1;
+  }
+
+  65%,
+  67%,
+  76%,
+  78% {
+    opacity: 0.2;
+  }
+
+  66%,
+  69%,
+  77% {
+    opacity: 0.8;
+  }
+
+  85%,
+  97% {
+    opacity: 0;
+  }
+}
+
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+
+/*------------- PORTFOLIO -------------*/
+a,
+h3 {
+  text-decoration: none;
+  text-align: center;
+  font-family: videotype;
+  font-size: 1.6em;
+  color: white;
+}
+
+h3 {
+  margin-top: 2em;
+  width: 8em;
+  padding: 0 10px 0 10px;
+  border-color: white;
+  border-bottom-style: solid;
+  grid-row: 1/2;
+  transition: background-color, 0.5s ease-in-out;
+}
+
+h3:hover {
+  cursor: pointer;
+  background-color: white;
+  color: #161616;
+  box-shadow: 0 0 5px 1px white;
+}
+
+.img_con {
+  display: flex;
+  justify-content: center;
+}
+
+.img_con img {
+  position: relative;
+  max-width: 85%;
+  box-shadow: 0 0 5px 1px white;
+  border: 2px white solid;
+}
+
+#portfolio_h2 {
+  position: relative;
+  display: grid;
+}
+
+.text_con {
+  display: flex;
+  justify-content: center;
+}
+
+.link_con {
+  display: flex;
+  justify-content: center;
+}
+.link_style {
+  border: 2px white solid;
+  padding: 10px 20px 10px 20px;
+  margin: 0.2em 0 1em 0;
+}
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+/*------------- OM MIG -------------*/
+.p_col h2 {
+  font-size: 2.2vw;
+  padding-top: 0;
+  margin-bottom: 0;
+}
+
+.p_col h4 {
+  font-family: videotype;
+  color: white;
+  margin: 0;
+  font-size: 1em;
+}
+
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+.hide {
+  display: none;
+}

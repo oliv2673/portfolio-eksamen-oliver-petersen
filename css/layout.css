@@ -1,0 +1,111 @@
+/*--------------------- DESKTOP VERSION ---------------------*/
+/*------- FORSIDE -------*/
+#forside_tekst {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/*------- PORTFOLIO -------*/
+
+.tema_con {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+  justify-content: space-evenly;
+  margin: 0;
+  padding: 0;
+  grid-column: 1/5 span;
+}
+
+.h2_con {
+  text-align: center;
+  font-size: 2em;
+  margin: 0;
+  padding: 0;
+}
+
+.text_con {
+  display: flex;
+  position: relative;
+}
+
+.text_con p {
+  justify-content: center;
+  width: 1000px;
+}
+
+/*------- OM MIG -------*/
+@media (min-width: 600px) {
+  .grid_1-1 {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .flex_col {
+    display: grid;
+    place-items: center;
+    margin-top: 20px;
+    grid-column: 2/3;
+    height: 100px;
+  }
+
+  .p_col {
+    grid-column: 1/2;
+    grid-row: 1;
+    padding: 0 0 0 10%;
+  }
+
+  .flex_col img {
+    max-width: 65%;
+    box-shadow: 0 0 5px 1px white;
+    border: 2px white solid;
+  }
+}
+
+/*--------------------- MOBIL VERSION ---------------------*/
+@media (max-width: 600px) {
+  .flex_col {
+    display: grid;
+    place-items: center;
+    margin-top: 20px;
+  }
+  .flex_col img {
+    max-width: 80%;
+    box-shadow: 0 0 5px 1px white;
+    border: 2px white solid;
+  }
+
+  .flex_col {
+    display: grid;
+    place-items: center;
+    margin-top: 20px;
+  }
+  .flex_col img {
+    max-width: 80%;
+    box-shadow: 0 0 5px 1px white;
+    border: 2px white solid;
+  }
+
+  .p_col {
+    margin: auto 10% 0 10%;
+  }
+
+  .p_col h2 {
+    font-size: 3.5vw;
+    text-align: center;
+    padding-top: 0;
+    margin-bottom: 0;
+  }
+
+  .p_col h4 {
+    font-family: videotype;
+    color: white;
+    text-align: center;
+    margin: 0;
+    font-size: 1em;
+  }
+}
